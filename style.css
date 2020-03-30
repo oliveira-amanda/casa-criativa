@@ -7,6 +7,10 @@ body {
     color: #25282b;
 }
 
+body.hideScroll {
+    overflow: hidden;
+}
+
 a {
     font-weight: bold;
     text-decoration: none;
@@ -16,6 +20,39 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+p, .description {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 40px;
+
+    color: white;
+    background: #ff5E84;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 16px rgba(255, 0, 92, 0.16);
+
+    transition: 400ms;
+}
+
+.button:hover {
+    text-decoration: none;
+
+    background: #0984e3;
 }
 
 button {
@@ -38,11 +75,6 @@ button:hover {
     text-decoration: underline;
 }
 
-button.fat:hover {
-    text-decoration: none;
-
-}
-
 footer {
     font-weight: regular;
     font-size: 14px;
@@ -63,24 +95,6 @@ main {
     margin: 32px 0;
 }
 
-button.fat {
-    width: 150px;
-    height: 40px;
-
-    color: white;
-    background: #ff5E84;
-
-    border-radius: 6px;
-
-    box-shadow: 0 8px 16px rgba(255, 0, 92, 0.16);
-}
-
-p, .description {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.1px;
-}
-
 #container {
     display: flex;
 
@@ -93,7 +107,7 @@ p, .description {
 
 #intro {
     width: 300px;
-    margin-right: 20px;
+    margin-right: 64px;
 }
 
 #buttons {
@@ -146,13 +160,17 @@ p, .description {
 
     position: absolute;
     top: 0;
-    
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
 
     background: #ff5E84;
 
     transition: 400ms;
+}
+
+#modal.addScroll {
+    overflow: auto;
 }
 
 #modal .content {
@@ -172,7 +190,7 @@ p, .description {
     width: 80%;
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 0 auto 2%;
 }
 
 .content form div:nth-child(3), 
@@ -254,4 +272,71 @@ form button:hover {
 #modal.hide {
     opacity: 0;
     visibility: hidden;
+}
+
+/*idea.html*/
+
+#page-ideas #container {
+    display: block;
+}
+
+#page-ideas header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideas nav li {
+    margin-right: 16px;
+
+    list-style-type: none;
+}
+
+#page-ideas nav li a {
+    color: #25282b;
+}
+
+#page-ideas nav li .button {
+    color: #fff;
+}
+
+#page-ideas nav li:last-child { 
+    margin: 0;
+}
+
+section#title {
+    text-align: center;
+}
+
+section#title p{
+    margin: 0;
+
+    opacity: 0.7;
+}
+
+section#title h1{
+    margin: 0;
+
+    font-size: 28px;
+}
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+section#ideas .idea {
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer {
+    margin: 64px 0;
 }
