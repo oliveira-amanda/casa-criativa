@@ -2,7 +2,7 @@
 
 ### 🗒 Sobre
 
-A casa criativa é uma aplicação com objetivo de catalogar ideias como brincadeiras, jogos, filmes, entre outros, para a serem feitas
+A casa criativa é uma aplicação com objetivo de catalogar ideias como brincadeiras, jogos, filmes, entre outros, para serem feitas
 duranto o período da crise (pandemia da covid-19). Essa aplicação foi desenvolvida em um *workshop* realizado pela [Rocketseat](https://rocketseat.com.br/) no mês de
 março de 2020. 
 
